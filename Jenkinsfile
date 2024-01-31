@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+    //agent any
+    agent {
+     node {
+	  label 'AGENT-1'  //here 'AGENT-1' is a label name given in jenkins agent while configure.
+	 }
+    }  
 
     stages {
         stage('Build') {
